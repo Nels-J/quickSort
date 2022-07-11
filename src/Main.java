@@ -34,7 +34,7 @@ public class Main {
             while (numbersToSort[leftPointer] <= pivot && leftPointer < rightPointer) {
                 leftPointer++;
             }
-            while (numbersToSort[rightPointer] >= pivot && rightPointer < leftPointer) {
+            while (numbersToSort[rightPointer] >= pivot && leftPointer < rightPointer) {
                 rightPointer--;
             }
             swap(numbersToSort, leftPointer, rightPointer);
@@ -45,7 +45,7 @@ public class Main {
         quickSort(numbersToSort, leftPointer + 1, highIndex); // sorting array on the right side of the pivot
     }
 
-    private static void swap(int[] numbersToSort, int index1, int index2) {
+    private static void swap(int[] numbersToSort, int index1, int index2) { //
         int tempValueToSwap = numbersToSort[index1];
         numbersToSort[index1] = numbersToSort[index2];
         numbersToSort[index2] = tempValueToSwap;
